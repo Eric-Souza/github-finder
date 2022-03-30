@@ -14,7 +14,7 @@ function UserSearch() {
     e.preventDefault();
 
     if (text === '') {
-      setAlert('Please enter something', 'error');
+      return setAlert('Please type an user name', 'error');
     }
 
     searchUsers(text);
@@ -45,7 +45,7 @@ function UserSearch() {
         </form>
       </div>
 
-      {users.length > 0 && (
+      {users?.length > 0 && (
         <div>
           <button onClick={clearUsers} className="btn btn-ghost btn-lg">
             Clear
